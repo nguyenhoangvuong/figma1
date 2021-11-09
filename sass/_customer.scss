@@ -1,0 +1,125 @@
+.customer {
+  .boxed {
+    margin-bottom: 60px;
+  }
+
+  .heading {
+    max-width: 447px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-item {
+    padding: 30px;
+    border: 2px solid $gray-lighter-color;
+    border-radius: 10px;
+    margin: 0 25px;
+
+    &.slick-current.slick-active {
+      border-color: $primary-color;
+    }
+  }
+
+  &-top {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+  }
+
+  &-avatar {
+    width: 50px;
+    height: 50px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 100rem;
+    }
+  }
+  &-name,
+  &-address {
+    line-height: 1;
+  }
+
+  &-rating {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+  }
+
+  //  custom slick slider
+  .slick-track {
+    display: flex;
+    padding-bottom: 60px;
+  }
+
+  .slick-dots {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+    transform: translateY(50%);
+
+    button {
+      font-size: 0;
+      background-color: $gray-color;
+      width: 15px;
+      height: 15px;
+      border-radius: 100rem;
+      transition: all 0.2s linear;
+    }
+
+    .slick-active button {
+      background-color: $primary-color;
+      width: 45px;
+    }
+  }
+
+  .slick-arrow {
+    width: 60px;
+    height: 60px;
+    border-radius: 100rem;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translateY(50%);
+    z-index: 10;
+  }
+  .slick-prev {
+    border: 1px solid $primary-color;
+    background-color: transparent;
+    right: 80px;
+    bottom: 0;
+  }
+
+  .slick-next {
+    background-color: $primary-color;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .customer {
+    .slick-track {
+      padding-bottom: 20px;
+    }
+
+    .slick-dots {
+      justify-content: center;
+    }
+
+    &-list {
+      padding-bottom: 50px;
+    }
+  }
+}
